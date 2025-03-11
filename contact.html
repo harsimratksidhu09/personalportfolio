@@ -3,31 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Page</title>
+    <title>Contact Me - My Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="light-scheme"> <!-- Set initial color scheme to light-scheme -->
+<body>
     <header>
+        <h1>Contact Me</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="about.html">About Me</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h1>Contact Us</h1>
-        <p>This is the contact page.</p>
-        <button id="colorSchemeButton">Change Color Scheme</button> <!-- Button to change color scheme -->
+        <section class="contact-form">
+            <h2>Get in Touch</h2>
+            <form action="#" method="POST">
+                <label for="email">sidhu_harsimrat@khalsaschool.ca:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="message">Contact Me For More Information:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+                <input type="submit" value="Send Message">
+            </form>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Your Website</p>
+        <p>Created By: Harsimrat K. Sidhu</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
-
