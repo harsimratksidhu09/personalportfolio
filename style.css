@@ -1,4 +1,59 @@
-/* General body styling */
+/* Generic Styles for All Pages */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for color changes */
+}
+
+/* Default Color Scheme (Light Mode) */
+.light-scheme {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.light-scheme header,
+.light-scheme footer {
+    background-color: #333;
+    color: white;
+}
+
+/* Dark Color Scheme */
+.dark-scheme {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+.dark-scheme header,
+.dark-scheme footer {
+    background-color: #222;
+    color: white;
+}
+
+/* Blue Color Scheme */
+.blue-scheme {
+    background-color: #e0f7fa;
+    color: #00695c;
+}
+
+.blue-scheme header,
+.blue-scheme footer {
+    background-color: #004d40;
+    color: white;
+}
+
+/* Button Styles */
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}/* General body styling */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #F9F5EB; /* Soft beige background */
