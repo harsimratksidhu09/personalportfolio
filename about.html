@@ -3,38 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About me-Harsimrat K. Sidhu</title>
+    <title>About Me - My Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
-     <title>About me-Harsimrat K. Sidhu</title>
-    <body class="light-scheme"> <!-- Set initial color scheme to light-scheme -->
     <header>
-    
-    </header>
-            <h1>Hobbies</h1>
+        <h1>About Me</h1>
+        <nav>
             <ul>
-                <li>Swimming</li>
-                <li>Reading books</li>
-                <li>Drawing</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about">
+            <h2>My Hobbies and Interests</h2>
+            <ul>
                 <li>Watching T.V.</li>
+                <li>Drwaing</li>
                 <li>Running</li>
             </ul>
-            <h2>Education</h2>
-            <p>I am currently studying in Grade 10 at Khalsa Secondary School. I am interested in computer science and looking forward to pursuing more in the tech field.</p>
-       <nav>
-   <section class="contact">
-        
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-<main>
+             <p>I enjoy web reading, swimming, and traveling. My main goal is to improve my skills in front-end development and create impactful web designs.</p>
+            <h3>Education</h3>
+            <p>I am a Grade 10 student, and I hold a lot of passion for computer science.</p>
+        </section>
+
+        <section class="form-section">
+            <h3>Contact Me</h3>
+            <form id="contact-form">
+                <label for="name">Harsimrat K. Sidhu:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                
+                <label>Preferred Contact Method:</label><br>
+                <input type="radio" id="email" name="contact" value="Email" checked>
+                <label for="email">sidhu_harsimrat@khalsaschool.ca</label><br>
+                <input type="radio" id="phone" name="contact" value="Phone">
+                <label for="phone">Phone</label><br><br>
+                
+                <label for="subscribe">Subscribe to Newsletter:</label>
+                <input type="checkbox" id="subscribe" name="subscribe"><br><br>
+
+                <button type="button" onclick="changeColor()">Change Background Color</button><br><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+
     <footer>
-        <p>Created by Harsimrat K. Sidhu</p>
+        <p>Created By: Harsimrat K. Sidhu</p>
     </footer>
 
     <script src="script.js"></script>
