@@ -3,6 +3,7 @@
         <title>About Me - Harsimrat K. Sidhu</title>
     <head>
     <body>
+        <body class="light-scheme"> <!-- Set initial color scheme to light-scheme -->
         <h1>About Me</h1>
         <p>To go to other page <a href="index.html">Home</a></p>
          <h2>Hobbies</h2>
@@ -22,7 +23,24 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+    <main>
+    <h3>Contact Form</h3>
+        <form id="contactForm">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
 
+            <label for="radio">Choose an option:</label>
+            <input type="radio" id="radio1" name="radio" value="Option 1"> Option 1
+            <input type="radio" id="radio2" name="radio" value="Option 2"> Option 2<br><br>
+
+            <label for="checkbox">Select your preferences:</label>
+            <input type="checkbox" id="checkbox1" name="checkbox" value="Preference 1"> Preference 1
+            <input type="checkbox" id="checkbox2" name="checkbox" value="Preference 2"> Preference 2<br><br>
+
+            <button type="button" id="submitButton">Submit</button>
+        </form>
+        <button id="colorSchemeButton">Change Color Scheme</button> <!-- Button to change color scheme -->
+    </main>
     <footer>
         <p>Created by Harsimrat K. Sidhu</p>
     </footer>
