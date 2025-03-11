@@ -24,3 +24,28 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', changeColorScheme);
     }
 });
+// Function to display a greeting message based on the time of day
+    function displayGreeting() {
+        const now = new Date();
+        const hour = now.getHours();
+        let greetingMessage = '';
+
+        // Determine the time of day and set the appropriate greeting
+        if (hour < 12) {
+            greetingMessage = 'Good Morning!';
+        } else if (hour < 18) {
+            greetingMessage = 'Good Afternoon!';
+        } else {
+            greetingMessage = 'Good Evening!';
+        }
+
+        // Display the greeting message on the page
+        const greetingElement = document.getElementById('greetingMessage');
+        if (greetingElement) {
+            greetingElement.textContent = greetingMessage;
+        }
+    }
+
+    // Call the displayGreeting function when the page loads
+    displayGreeting();
+});
