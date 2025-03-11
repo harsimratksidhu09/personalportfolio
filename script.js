@@ -1,49 +1,36 @@
-// Function to change the background color
+// Change background color on button click
 function changeBackgroundColor() {
-    document.body.style.backgroundColor = getRandomColor();
+    const colors = ['#F9F5EB', '#FFE4D9', '#F1F0F3', '#C5D1C5', '#E3D7B9']; // Neutral color palette
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    document.body.style.backgroundColor = randomColor;
 }
 
-// Function to generate a random color
-function getRandomColor() {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-}
+// Display greeting based on time of day
+window.onload = function () {
+    const greeting = document.getElementById('greeting');
+    const currentTime = new Date();
+    const hours = currentTime.getHours();
 
-// Function to display a greeting message based on the time of day
-function displayGreeting() {
-    const greetingDiv = document.getElementById("greeting");
-    const currentHour = new Date().getHours();
-    if (currentHour < 12) {
-        greetingDiv.innerHTML = "Good Morning!";
-    } else if (currentHour < 18) {
-        greetingDiv.innerHTML = "Good Afternoon!";
+    if (hours < 12) {
+        greeting.innerHTML = "Good Morning, Welcome to My Portfolio!";
+    } else if (hours < 18) {
+        greeting.innerHTML = "Good Afternoon, Great to see you!";
     } else {
-        greetingDiv.innerHTML = "Good Evening!";
+        greeting.innerHTML = "Good Evening, Hope you're having a relaxing time!";
     }
 }
 
-displayGreeting(); // Call the greeting function on page load
-
-// Handle form submission for the Contact page
-document.getElementById('contactForm').addEventListener('submit', function(event) {
+// Handle form submission and display a personalized message
+document.getElementById('contact-form').addEventListener('submit', function (event) {
     event.preventDefault();
-    
-    // Collect user input
+
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
-    
-    // Display a confirmation message
-    const response = document.getElementById('formResponse');
-    response.innerHTML = `
-        <p>Thank you for reaching out, ${name}!</p>
-        <p>Your message has been received. We will get back to you at ${email} soon.</p>
-    `;
-    
-    // Reset form
-    document.getElementById('contactForm').reset();
+
+    const response = `Thank you, ${name}! We've received your message: "${message}". We'll get back to you at ${email} shortly.`;
+    document.getElementById('form-response').innerText = response;
+
+    // Optional: Clear form fields after submission
+    document.getElementById('contact-form').reset();
 });
